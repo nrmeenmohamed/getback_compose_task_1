@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">GitHupRepoApp</string>
+    <string name="issue_icon">issue icon</string>
+    <string name="issue_title">Bump Pyarrow 7 hvjhvik bjhbk </string>
+    <string name="issue_body">NONE</string>
+    <string name="issue_date">2023-11-9</string>
+    <string name="issue_time">23:0 PM</string>
+    <string name="arrow_back">arrow back</string>
+    <string name="repositry_screen_avatar_image_description">repositry_screen_avatar_image_description</string>
+    <string name="repositry_screen_star_image_description">repositry_screen_star_image_description</string>
+    <string name="title_repository_app_bar">GitHup Repositories</string>
 </resources>

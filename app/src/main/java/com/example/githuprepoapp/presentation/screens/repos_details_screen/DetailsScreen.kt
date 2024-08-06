@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -30,6 +31,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
@@ -40,6 +42,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.githuprepoapp.R
+import com.example.githuprepoapp.presentation.share_items.RepoAppBar
 import com.example.githuprepoapp.presentation.theme.LightBackgroundColor
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -48,23 +51,8 @@ import com.example.githuprepoapp.presentation.theme.LightBackgroundColor
 fun DetailsScreen() {
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = "Details",
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.fillMaxWidth(),
-                        textAlign = TextAlign.Center
-                    )
-                },
-                navigationIcon = {
-                    IconButton(onClick = { /*TODO*/ }) {
-                        Icon(
-                            imageVector = Icons.Filled.ArrowBack,
-                            contentDescription = "back arrow"
-                        )
-                    }
-                }
+            RepoAppBar(
+                title = "Details",
             )
         },
         content = {
@@ -79,10 +67,11 @@ fun DetailsScreen() {
                 Spacer(modifier = Modifier.height(55.dp))
 
                 Image(
-                    painter = painterResource(id = R.drawable.profile_image),
+                    painter = painterResource(id = R.drawable.im),
                     contentDescription = "profile image",
-                    modifier = Modifier.size(height = 150.dp, width = 150.dp),
-                    contentScale = ContentScale.FillBounds,
+                    modifier = Modifier.size(height = 150.dp, width = 150.dp)
+                        .clip(CircleShape),
+                    contentScale = ContentScale.Crop,
                     alignment = Alignment.Center
                 )
                 Spacer(modifier = Modifier.height(10.dp))
