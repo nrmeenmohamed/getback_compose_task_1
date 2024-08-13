@@ -4,3 +4,7 @@
 # Issues Screen
 ![Screenshot_20240807_004710](https://github.com/user-attachments/assets/b32cf500-fda9-4621-a5e8-2b12fc83053b)
 
+# Error Screen
+![Screenshot_٢٠٢٤٠٨١٣_٠٦٥٦٣٥](https://github.com/user-attachments/assets/c1cfb1bd-3a7a-4c44-90ad-ce7c238bb787)
+
+
