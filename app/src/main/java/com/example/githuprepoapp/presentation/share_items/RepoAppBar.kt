@@ -1,5 +1,6 @@
 package com.example.githuprepoapp.presentation.share_items
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -17,43 +18,41 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.githuprepoapp.R
 
-
 @ExperimentalMaterial3Api
 @Composable
-fun RepoAppBar(
+fun AppBar(
+    @StringRes title: Int,
     modifier: Modifier = Modifier,
-    title: String,
     titleStyle: TextStyle = MaterialTheme.typography.titleLarge,
-    backgroundColor: Color = MaterialTheme.colorScheme.primary,
-    showBackArrow: Boolean = true,
-    onBackArrowClicked: () -> Unit = {},
+    color: Color = MaterialTheme.colorScheme.primary,
+    showBackButton: Boolean = true,
+    onBackButtonClicked: () -> Unit = {},
 ) {
     CenterAlignedTopAppBar(
-        modifier = modifier.background(backgroundColor),
         title = {
             Text(
-                text = title,
-                style = titleStyle
+                stringResource(title),
+                style = titleStyle,
             )
         },
+        modifier = modifier.background(color),
         navigationIcon = {
-            if (showBackArrow)
-                IconButton(onClick = onBackArrowClicked) {
+            if (showBackButton) {
+                IconButton(onClick = onBackButtonClicked) {
                     Icon(
                         imageVector = Icons.Filled.ArrowBack,
-                        contentDescription = stringResource(R.string.arrow_back)
+                        contentDescription = stringResource(R.string.back_arrow)
                     )
                 }
-        },
+            }
+        }
     )
 }
-
 @ExperimentalMaterial3Api
 @Preview
 @Composable
 private fun PreviewAppBar() {
-        RepoAppBar(title = "Github Repos") {
 
-        }
+        AppBar(title = R.string.details_app_bar_title)
 
 }

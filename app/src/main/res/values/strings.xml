@@ -9,4 +9,13 @@
     <string name="repositry_screen_avatar_image_description">repositry_screen_avatar_image_description</string>
     <string name="repositry_screen_star_image_description">repositry_screen_star_image_description</string>
     <string name="title_repository_app_bar">GitHup Repositories</string>
+    <string name="error_screen_title">Githup Repositories</string>
+    <string name="error_screen_description">error image</string>
+    <string name="error_message">Something Went Wrong</string>
+    <string name="error_message_type">Network Error</string>
+    <string name="text_button">ReTry</string>
+    <string name="back_arrow">back_arrow</string>
+    <string name="details_app_bar_title">app bar</string>
+    <string name="issues">Issues</string>
+    <string name="details">Details</string>
 </resources>
